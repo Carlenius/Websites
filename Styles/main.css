@@ -7,5 +7,10 @@ body {
 
 a {
   font-weight: bold;
-  font-size: 10em;
+  font-size: 5em;
+  text-decoration: none;
+}
+
+p {
+  font-size: 1.2em;
 }/*# sourceMappingURL=main.css.map */

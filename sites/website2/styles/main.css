@@ -1,5 +1,5 @@
 body {
-  background-color: greenyellow;
+  background-color: rgb(236, 44, 44);
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
   padding-top: 10em;
@@ -9,8 +9,4 @@ a {
   font-weight: bold;
   font-size: 5em;
   text-decoration: none;
-}
-
-p {
-  font-size: 1.2em;
-}
+}/*# sourceMappingURL=main.css.map */
