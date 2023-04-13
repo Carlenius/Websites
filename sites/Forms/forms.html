@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://use.typekit.net/cbd7oor.css">
+  <link rel="stylesheet" href="Css/styles.css">
+  <title>Forms Practice</title>
+</head>
+<body>
+  <h1>Survey practice <br> website</h1>
+  <form action="#">
+    <div class="form-control">
+      <label for="name" id="lable-name">
+        Name
+      </label>
+      <input type="text" id="name" placeholder="Enter your name">
+    </div>
+    <div class="form-control">
+      <label for="Email"id="label-email">
+        Email
+      </label>
+      <input type="text" id="email" placeholder="Enter your email">
+    </div>
+    <div class="form-control">
+      <label for="age" id="label-age">
+        Age
+      </label>
+      <input type="text" id="age" placeholder="Enter your age">
+    </div>
+    <div class="form-control">
+      <label for="role" id="role">
+        Which option best describes you?
+      </label>
+      <select name="role" id="role">which option best describes you?
+        <option value="student">student</option>
+        <option value="student">intern</option>
+        <option value="student">professional</option>
+        <option value="student">other</option>
+      </select>
+    </div>
+    <div class="form-control">
+      <label>
+        Would you recommend this survey for friends?
+      </label>
+      <label for="recommend-1" class="radio">
+        <input type="radio" id="recommend-1" name="recommend"> Yes
+      </label>
+      <label for="recommend-2" class="radio">      
+        <input type="radio" id="recommend-2" name="recommend"> No
+      </label>
+      <label for="recommend-2" class="radio">      
+        <input type="radio" id="recommend-2" name="recommend"> Maybe
+      </label>
+    </div>
+    <div class="form-control">
+      <label for="Languages and frameworks">Languages and frameworks known <small>(check all that apply)</small></label>
+      <label for="inp-1" class="checkbox">
+        <input type="checkbox" name="inp"> C
+      </label>
+      <label for="inp-1"class="checkbox">
+        <input type="checkbox" name="inp"> C++
+      </label>
+      <label for="inp-1"class="checkbox">
+        <input type="checkbox" name="inp"> C#
+      </label>
+      <label for="inp-1"class="checkbox">
+        <input type="checkbox" name="inp"> Java
+      </label>
+      <label for="inp-1"class="checkbox">
+        <input type="checkbox" name="inp"> Pyhton
+      </label>
+      <label for="inp-1"class="checkbox">
+        <input type="checkbox" name="inp"> JavaScript
+      </label>
+      <label for="inp-1"class="checkbox">
+        <input type="checkbox" name="inp"> React
+      </label>
+      <label for="inp-1"class="checkbox">
+        <input type="checkbox" name="inp"> Angular
+      </label>
+
+    </div>
+    <div class="form-control">
+      <label for="comment">
+        Any comments or suggestions?
+      </label>
+      <textarea name="comment" id="comment" cols="30" rows="10" placeholder="Enter your comment here"></textarea>
+    </div>
+    <button type="submit" value="submit" class="button"><span>Submit</span></button>
+  </form>
+  <footer><img src="logo/SVG/Carlenius logo.svg" alt="Carlenius logo"></footer>
+</body>
+</html>
