@@ -77,6 +77,9 @@ body {
 #LinkedIn-link {  
   top: 10px;
 }
+#GoBack {  
+  top: 110px;
+}
 
 #LinkedIn-link > i {
   color: rgb(239, 83, 80);
