@@ -32,8 +32,8 @@ body {
 }
 
 .side .fancy {
-  font-family: "Lobster", cursive;
-  font-size: 1.3em;
+  font-family: 'Pencerio', cursive;
+  font-size: 8vw;
   line-height: 0.8em;
 }
 
@@ -46,6 +46,7 @@ body {
 #left-side .title {  
   color: white;  
 }
+
 
 #left-side .fancy {
   color: var(--right-color);
