@@ -33,6 +33,10 @@ nav li a:hover {
   color: rgb(255, 208, 0);
 }
 
+.svg-color {
+  fill: black;
+}
+
 a {
   text-decoration: none;
 }

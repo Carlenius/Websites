@@ -9,7 +9,6 @@
     <title>Harjoitus2</title>
 </head>
 <body>
-<main>
     <nav>
         <ul id="menu" class="menu">
             <li><a class="menuitem" href="index.html">etusivu</a></li>
@@ -18,12 +17,13 @@
             <li><a class="menuitem" href="yhteys.html">yhteys</a></li>
         </ul>
         <button onclick="menu()" class="hamburger">
-            <svg class="menuIcon" viewBox="0 0 448 512"><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>
+            <svg id="menuIcon"class="menuIcon" viewBox="0 0 448 512"><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>
         </button>
     </nav>
     <header>
         <H1>retropyörät OY</H1>
     </header>
+<main>
     <div class="wrapper">
         <img src="../Kuvat/Pyörä1.jpg" alt="Kuva pyörästä">
         <div class="main">
@@ -83,8 +83,11 @@
     <script>
         function menu() {
         var x = document.getElementById("menu");
+        var y = document.getElementById("menuIcon");
         x.classList.toggle("menu-open");
-        }   
+        y.classList.toggle("svg-color")
+
+        }  
     </script>
 </body>
 </html>
