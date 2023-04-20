@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/main.css">
+    <title>Yhteys</title>
+</head>
+<body>
+    <nav>
+        <ul id="menu" class="menu">
+            <li><a class="menuitem" href="index.html">etusivu</a></li>
+            <li><a class="menuitem" href="pyorat.html">pyörät</a></li>
+            <li><a class="menuitem" href="huollot.html">huollot</a></li>
+            <li><a class="menuitem" href="yhteys.html">yhteys</a></li>
+        </ul>
+        <button onclick="menu()" class="hamburger">
+            <svg class="menuIcon" viewBox="0 0 448 512"><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>
+        </button>
+    </nav>
+    <header>
+        <H1>Yhteys</H1>
+    </header>
+
+    <div class="yhteys-card-wrapper">
+        <img src="/Kuvat/Yhteys.jpeg" alt="myymälä">
+        <div class="right-text">
+            <h2>Retropyörät Kuopio</h2>
+            <p>Retropyörät Kuopio on kaikkia pyöräilijöitä palveleva pyöräilyn erikoisliike, joka sijaitsee Kuopion Haapaniemessä (vieressä mm. Lidl). Kuopiossa sinua palvelevat Tommi, Nico, Ville ja Jukka – tervetuloa!</p>
+            <div class="info">
+                <strong>Tehdaskatu 10, 70620 Kuopio</strong>
+                <strong>029 7031 1705</strong>
+                <strong>kuopio@retropyörät.fi</strong>
+            </div>
+            <button> <a href="#">Tutustu myymälään!</a></button>
+        </div>
+    </div>
+
+    <div class="ota-yhteyttä">
+        <h2>Ota yhteyttä!</h2>
+        <form action="#">
+            <label for="fname">Etunimi</label>
+            <input type="text" id="fname" placeholder="Etunimi">
+            <label for="lname">Sukunimi</label>
+            <input type="text" id="lname" placeholder="Sukunimi">
+            <label for="sposti">Sähköposti</label>
+            <input type="text" id="sposti" placeholder="Sähköposti">
+            <label for="viesti">Viesti</label>
+            <textarea name="viesti" id="viesti" cols="30" rows="10"></textarea>
+            <input value="Lähetä" type="submit" name="submit" id="submit">
+        </form>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-text">
+                <ul>
+                    <li><strong>Pikapalvelu</strong></li>
+                    <li>Janne Vänskä</li>
+                    <li>vänskä.vänskä@rajakarhu.com</li>
+                    <li>puh. +358 666 666</li>
+                </ul>
+            </div>
+            <div class="footer-map">
+                <ul>
+                    <li><strong>Sijainti</strong></li>
+                    <li>Ryynärikatu 19K</li>
+                </ul>
+                <div class="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2155.065549591777!2d27.704620371298002!3d62.98634338487535!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4684a50e8753b35b%3A0x7ce0c290ca897391!2zVnVvcmVsYW4gdGFsbGkgQS5Qw6TDpGtrw7ZuZW4!5e0!3m2!1sen!2sfi!4v1680899585043!5m2!1sen!2sfi" width="180" height="180" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+            <div class="footer-some">
+                <ul>
+                    <li><strong>Some</strong></li>
+                    <li><a href="#">facebook</a></li>
+                    <li><a href="#">instagram</a></li>
+                    <li><a href="#">twitter</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script>
+        function menu() {
+        var x = document.getElementById("menu");
+        x.classList.toggle("menu-open");
+        }   
+    </script>
+</body>
+</html>
