@@ -539,4 +539,7 @@ a {
 }
 .menu-open a {
   color: black;
+}
+.menu-open a:hover {
+  color: white;
 }/*# sourceMappingURL=main.css.map */
