@@ -29,7 +29,7 @@ nav {
             letter-spacing: .15em;
 
             &:hover {
-                color: white;
+                color: rgb(255, 208, 0);
             }
         }
     }
@@ -141,9 +141,19 @@ footer {
     color: rgb(2, 2, 2);
     display: flex;
     justify-content: center;
+    padding-bottom: 70px;
 
     li {
         list-style-type: none;
+        a {
+            color: black;
+            &:hover {
+                color: rgb(255, 208, 0);
+                background-color: black;
+                border-radius: 4px;
+                outline: 5px solid black;
+            }
+        }
     }
 }
 
