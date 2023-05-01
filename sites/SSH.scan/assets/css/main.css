@@ -30,7 +30,6 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 body {
-  line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   background-color: #212431;
   font-family: "Inter", sans-serif;
@@ -48,7 +47,7 @@ body {
           user-select: none;
 }
 .logo span {
-  color: #65C9FE;
+  color: #00DCFF;
 }
 
 nav {
@@ -72,11 +71,11 @@ nav a {
   color: #fff;
 }
 nav a:hover {
-  color: #65C9FE;
+  color: #00DCFF;
 }
 nav a:focus {
   outline: none;
-  color: #65C9FE;
+  color: #00DCFF;
 }
 
 main {
@@ -99,7 +98,7 @@ main form #search {
   margin-bottom: 5rem;
   height: 5rem;
   border-radius: 15px;
-  border: 2px solid #65C9FE;
+  border: 2px solid #00DCFF;
   background: #212431 0% 0%;
 }
 main form #search:focus {
@@ -115,21 +114,21 @@ main form #button {
   height: 7rem;
   font-weight: 700;
   font-size: 3.5rem;
-  color: #65C9FE;
+  color: #00DCFF;
   border-radius: 10px;
   background-color: #212431;
   border: none;
   cursor: pointer;
-  outline: 2px solid #65C9FE;
+  outline: 2px solid #00DCFF;
 }
 main form #button:hover {
   color: #212431;
-  background-color: #65C9FE;
+  background-color: #00DCFF;
   box-shadow: 0px 0px 30px 11px rgba(101, 201, 254, 0.29);
 }
 main form #button:focus {
   color: #212431;
-  background-color: #65C9FE;
+  background-color: #00DCFF;
   box-shadow: 0px 0px 30px 11px rgba(101, 201, 254, 0.29);
 }
 
@@ -143,4 +142,73 @@ main form #button:focus {
 }
 .main-text p {
   margin-bottom: 5rem;
+}
+
+.results {
+  margin-top: 10rem;
+  width: 122rem;
+  margin: 15rem auto;
+}
+
+.results-item {
+  padding: 5rem 0 7rem 0;
+  position: relative;
+}
+.results-item:after {
+  content: "";
+  border-top: 2px solid #00DCFF;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-shadow: 0px 0px 30px 11px rgba(101, 201, 254, 0.1);
+}
+.results-item h2 {
+  text-align: start;
+  font-size: 4rem;
+  color: #00DCFF;
+  margin-bottom: 4rem;
+}
+.results-item table {
+  font-size: 2rem;
+  width: 100%;
+  text-align: start;
+  font-weight: 600;
+  border-spacing: 0;
+}
+.results-item table tr:nth-child(2n+1) {
+  background-color: #1e202b;
+}
+.results-item table td {
+  vertical-align: top;
+  padding: 0.7rem 0 0.7rem 5rem;
+}
+.results-item table td:nth-child(1) {
+  width: 50rem;
+}
+.results-item table td:nth-child(2) {
+  font-weight: 400;
+}
+.results-item table td:nth-child(3) {
+  font-weight: 400;
+}
+.results-item table td:nth-child(4) {
+  padding-right: 4rem;
+  text-align: center;
+}
+
+.ok {
+  color: #1FDE72;
+}
+
+.warn {
+  color: #F8B52E;
+}
+
+.critical {
+  color: #EC3E3E;
+}
+
+.unknown {
+  color: #858585;
 }/*# sourceMappingURL=main.css.map */

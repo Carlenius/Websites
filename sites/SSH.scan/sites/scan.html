@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/xrr3suz.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <p class="logo">SSH<span>.scan</span></p>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <p class="logo hide">SSH<span>.scan</span></p>
+    </nav>
+<main>
+    <p class="logo">SSH<span>.scan</span></p>
+
+    <form action="#">
+        <input type="text" name="search" id="search">
+        <input type="submit" id="button" value="SCAN NOW">
+    </form>
+
+    <div class="results">
+        <div class="results-item">
+            <table>
+                    <H2>Server details</H2>
+                    <tr>
+                        <td>IP Address:</td>
+                        <td>10.11.12.13</td>
+                    </tr>
+                    <tr>
+                        <td>Banner:</td>
+                        <td>SSH-2.0-OpenSSH_6.8</td>
+                    </tr>
+                    <tr>
+                        <td>Fingerprint (ssh-ed25519):</td>
+                        <td>SHA256:fdDIoFwEWSzYCkDeBYNZWYmXYMofsaNNzHb7p58aJV4</td>
+                    </tr>
+                    <tr>
+                        <td>Fingerprint (ssh-rsa):</td>
+                        <td>SHA256:K4mKS3/lqPYbhR/NAh3B2f1IMeHjQ7OCNvQvkpVvqpY</td>
+                    </tr>
+            </table>
+        </div>
+        <div class="results-item">
+            <table>
+                    <H2>Host Key Types</H2>
+                    <tr>
+                        <td class="ok">ssh-ed25519<th>
+                        <td>10.11.12.13</td>
+                        <td class="ok">ok</td>
+                    </tr>
+                    <tr>
+                        <td class="critical">ecdsa-sha2-nistp256<th>
+                        <td>NIST P-curves are possibly back-doored by the U.S. National Security Agency. Score reduced by 2.</td>
+                        <td class="critical">critical</td>
+                    </tr>
+                    <tr>
+                        <td class="warn">rsa-sha2-512 (2048-bit)<th>
+                        <td>A 3072-bit modulus is needed to provide 128 bits of security, but a 2048-bit modulus is in use. Score reduced by 1.</td>
+                        <td class="warn">warning</td>
+                    </tr>
+                    <tr>
+                        <td class="unknown">ssh-rsa-sha256@ssh.com<th>
+                        <td></td>
+                        <td class="unknown">unknown</td>
+                    </tr>
+                    <tr>
+                        <td class="warn">rsa-sha2-256 (2048-bit)<th>
+                        <td>A 3072-bit modulus is needed to provide 128 bits of security, but a 2048-bit modulus is in use. Score reduced by 1.</td>
+                        <td class="warn">warning</td>
+                    </tr>
+                    <tr>
+                        <td class="warn">ssh-rsa (2048-bit)<th>
+                        <td>A 3072-bit modulus is needed to provide 128 bits of security, but a 2048-bit modulus is in use. Score reduced by 1.</td>
+                        <td class="warn">warning</td>
+                    </tr>
+            </table>
+        </div>
+    </div>
+</main>
+</body>
+</html>

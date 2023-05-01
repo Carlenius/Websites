@@ -27,9 +27,15 @@ p, h1, h2, h3, h4, h5, h6 {
 
 $color-main:#212431;
 $color-mainlight:#FFFFFF0D;
-$color-accent:#65C9FE;
+$color-maindark:#1e202b;
+$color-accent:#00DCFF;
 $color-white:#fff;
 $color-lightgray:#C5C5C5;
+
+$color-ok:#1FDE72;
+$color-warn:#F8B52E;
+$color-critical:#EC3E3E;
+$color-unknown: #858585;
 
 // Contents
 
@@ -38,7 +44,6 @@ $color-lightgray:#C5C5C5;
 }
 
 body {
-    line-height: 1.5;
     -webkit-font-smoothing: antialiased;
     background-color: $color-main;
     font-family: 'Inter', sans-serif;
@@ -164,4 +169,87 @@ main {
     p {
         margin-bottom: 5rem;
     }
+}
+
+.results {
+    margin-top: 10rem;
+    width: 122rem;
+    margin: 15rem auto;
+
+}
+.results-item {
+    padding: 5rem 0 7rem 0;
+    position: relative;
+
+    &:after {
+        content: '';
+        border-top: 2px solid $color-accent;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        -webkit-box-shadow: 0px 0px 30px 11px rgba(101,201,254,0.1);
+        -moz-box-shadow: 0px 0px 30px 11px rgba(101,201,254,0.1);
+        box-shadow: 0px 0px 30px 11px rgba(101,201,254,0.1);
+        
+    }
+
+    h2 {
+        text-align: start;
+        font-size: 4rem;
+        color: $color-accent;
+        margin-bottom: 4rem;
+    }
+
+    table {
+        font-size: 2rem;
+        width: 100%;
+        text-align: start;
+        font-weight: 600;
+        border-spacing: 0;
+
+
+        tr {
+            &:nth-child(2n+1) {
+                background-color: $color-maindark
+            }
+        }
+
+        td {
+            vertical-align: top;
+            padding: 0.7rem 0 0.7rem 5rem;
+
+            &:nth-child(1) {
+                width: 50rem;
+            }
+            &:nth-child(2) {
+                font-weight: 400;
+            }
+
+            &:nth-child(3) {
+                font-weight: 400;
+            }
+
+            &:nth-child(4) {
+                padding-right: 4rem;
+                text-align: center;
+            }
+        }
+    }
+}
+
+.ok {
+    color: $color-ok
+}
+
+.warn {
+    color: $color-warn;
+}
+
+.critical {
+    color: $color-critical
+}
+
+.unknown {
+    color: $color-unknown;
 }
