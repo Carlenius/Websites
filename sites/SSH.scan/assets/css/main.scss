@@ -160,11 +160,11 @@ main {
 
 .main-text {
     font-weight: 200;
-    margin-top: 15rem;
     font-size: 2rem;
     text-align: start;
-    margin: 15rem 40rem;
+    margin: 15rem auto;
     opacity: 0.4;
+    width: 100rem;
 
     p {
         margin-bottom: 5rem;
@@ -254,4 +254,47 @@ main {
 
 .unknown {
     color: $color-unknown;
+}
+
+@media screen and (max-width: 1600px)  {
+    .hide {
+        display: none;
+    }
+
+    nav ul {
+        margin-right: 0;
+        
+    }
+    
+}
+
+@media screen and (max-width: 1100px)  {
+
+    .main-text {
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .main-text p {
+        width: 90%;
+    }
+}
+@media screen and (max-width: 800px)  {
+    main #search {
+        width:  80vw !important;
+        background-color: red;
+    }
+
+    main .logo {
+        font-size: 15vw;
+        margin: 5rem auto;
+    }
+
+    nav ul {
+        display: none;
+    }
+
 }
