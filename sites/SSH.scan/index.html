@@ -25,7 +25,10 @@
     <p class="logo">SSH<span>.scan</span></p>
 
     <form action="sites/scan.html">
-        <input type="text" name="search" id="search">
+        <div class="search-wrapper">
+            <label for="search--ip"></label>
+            <input placeholder="IP" class="search search--ip" type="text" name="search" id="search"><input class="search search--port" type="text" name="search" id="search--port" placeholder="PORT">
+        </div>
         <input class="btn-main" type="submit" id="button" value="SCAN NOW">
     </form>
     <div class="main-text">
