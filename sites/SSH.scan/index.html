@@ -12,7 +12,7 @@
     <title>Document</title>
 </head>
 <body>
-    <nav>
+    <nav id="navbar">
         <p class="logo">SSH<span>.scan</span></p>
         <ul>
             <li><a href="#">Home</a></li>
@@ -37,5 +37,17 @@
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius modi quae debitis quos, voluptatem deleniti ratione aut atque, deserunt hic minima fugiat iste dignissimos voluptatibus libero odit officia eligendi adipisci repellendus animi corporis? Obcaecati sed praesentium, placeat iure porro ipsa.</p>
     </div>
 </main>
+<script>
+    var prevScrollpos = window.pageYOffset;
+    window.onscroll = function() {
+        var currentScrollPos = window.pageYOffset;
+        if (prevScrollpos > currentScrollPos) {
+            document.getElementById("navbar").style.top = "0";
+        } else {
+            document.getElementById("navbar").style.top = "-100px";
+        }       
+prevScrollpos = currentScrollPos;
+}
+</script>
 </body>
 </html>
