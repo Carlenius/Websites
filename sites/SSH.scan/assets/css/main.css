@@ -85,7 +85,7 @@ main {
   text-align: center;
 }
 main .logo {
-  margin: 9rem auto;
+  margin: 19rem auto 9rem auto;
   font-size: 14rem;
 }
 main form {
