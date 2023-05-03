@@ -12,7 +12,7 @@
     <title>SHH.scan</title>
 </head>
 <body>
-    <nav>
+    <nav id="navbar">
         <p class="logo">SSH<span>.scan</span></p>
         <ul>
             <li><a href="../index.html">Home</a></li>
@@ -26,7 +26,7 @@
         SSH<span>.scan</span>
     </p>
     
-    <form action="sites/scan.html">
+    <form action="../index.html">
         <div class="search-wrapper">
             <label for="search--ip"></label>
             <input placeholder="IP" class="search search--ip" type="text" name="search" id="search"><input class="search search--port" type="text" name="search" id="search--port" placeholder="PORT">
@@ -265,6 +265,7 @@
     </div>
 </main>
 <script>
+    // Opening table list
     const containers = document.querySelectorAll('.scan-results__item');
     
     containers.forEach(container => {
@@ -273,6 +274,17 @@
         table.classList.toggle('open');
         });
     });
+
+    var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("navbar").style.top = "0";
+  } else {
+    document.getElementById("navbar").style.top = "-100px";
+  }
+  prevScrollpos = currentScrollPos;
+}
 </script>
 </body>
 </html>
