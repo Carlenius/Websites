@@ -19,74 +19,257 @@
             <li><a href="#">About</a></li>
             <li><a href="#">Contact</a></li>
         </ul>
-        <p class="logo hide">SSH<span>.scan</span></p>
+        <p class="logo hidden">SSH<span>.scan</span></p>
     </nav>
 <main>
-    <p class="logo">SSH<span>.scan</span></p>
-
+    <p class="logo">
+        SSH<span>.scan</span>
+    </p>
+    
     <form action="../index.html">
         <input type="text" name="search" id="search">
-        <input type="submit" id="button" value="SCAN NOW">
+        <input class="btn-main" type="submit" id="button" value="SCAN NOW">
     </form>
-
+    
     <div class="scan-results">
-        <div class="scan-results-item">
-            <table>
-                    <H2>Server details</H2>
-                    <tr>
-                        <td>IP Address:</td>
-                        <td>10.11.12.13</td>
-                    </tr>
-                    <tr>
-                        <td>Banner:</td>
-                        <td>SSH-2.0-OpenSSH_6.8</td>
-                    </tr>
-                    <tr>
-                        <td>Fingerprint (ssh-ed25519):</td>
-                        <td>SHA256:fdDIoFwEWSzYCkDeBYNZWYmXYMofsaNNzHb7p58aJV4</td>
-                    </tr>
-                    <tr>
-                        <td>Fingerprint (ssh-rsa):</td>
-                        <td>SHA256:K4mKS3/lqPYbhR/NAh3B2f1IMeHjQ7OCNvQvkpVvqpY</td>
-                    </tr>
-            </table>
+        <div class="scan-results__header">
+            <h1 class="scan-results__header__title">SSH Scan report:</h1>
+            <button class="btn-filled">Get PDF</button>
         </div>
-        <div class="scan-results-item">
-            <table>
+        <div class="scan-results__table" >
+            <div class="scan-results__details result--styles">
+                <H2>Server details</H2>
+                <table>
+                        <tr>
+                            <td>IP Address:</td>
+                            <td>10.11.12.13</td>
+                        </tr>
+                        <tr>
+                            <td>Banner:</td>
+                            <td>SSH-2.0-OpenSSH_6.8</td>
+                        </tr>
+                        <tr>
+                            <td>Fingerprint (ssh-ed25519):</td>
+                            <td>SHA256:fdDIoFwEWSzYCkDeBYNZWYmXYMofsaNNzHb7p58aJV4</td>
+                        </tr>
+                        <tr>
+                            <td>Fingerprint (ssh-rsa):</td>
+                            <td>SHA256:K4mKS3/lqPYbhR/NAh3B2f1IMeHjQ7OCNvQvkpVvqpY</td>
+                        </tr>
+                </table>
+            </div>
+            
+            <div class="scan-results__item result--styles">
+                <div class="scan-results__item__title">
                     <H2>Host Key Types</H2>
-                    <tr>
-                        <td class="ok">ssh-ed25519<th>
-                        <td>10.11.12.13</td>
-                        <td class="ok">ok</td>
-                    </tr>
-                    <tr>
-                        <td class="critical">ecdsa-sha2-nistp256<th>
-                        <td>NIST P-curves are possibly back-doored by the U.S. National Security Agency. Score reduced by 2.</td>
-                        <td class="critical">critical</td>
-                    </tr>
-                    <tr>
-                        <td class="warn">rsa-sha2-512 (2048-bit)<th>
-                        <td>A 3072-bit modulus is needed to provide 128 bits of security, but a 2048-bit modulus is in use. Score reduced by 1.</td>
-                        <td class="warn">warning</td>
-                    </tr>
-                    <tr>
-                        <td class="unknown">ssh-rsa-sha256@ssh.com<th>
-                        <td></td>
-                        <td class="unknown">unknown</td>
-                    </tr>
-                    <tr>
-                        <td class="warn">rsa-sha2-256 (2048-bit)<th>
-                        <td>A 3072-bit modulus is needed to provide 128 bits of security, but a 2048-bit modulus is in use. Score reduced by 1.</td>
-                        <td class="warn">warning</td>
-                    </tr>
-                    <tr>
-                        <td class="warn">ssh-rsa (2048-bit)<th>
-                        <td>A 3072-bit modulus is needed to provide 128 bits of security, but a 2048-bit modulus is in use. Score reduced by 1.</td>
-                        <td class="warn">warning</td>
-                    </tr>
-            </table>
+                    <h3 class="critical">Passed: 1/10</h3>
+                </div>
+                <table>
+                        <tr>
+                            <td class="ok">ssh-ed25519<th>
+                            <td>10.11.12.13</td>
+                            <td class="ok">ok</td>
+                        </tr>
+                        <tr>
+                            <td class="critical">ecdsa-sha2-nistp256<th>
+                            <td>NIST P-curves are possibly back-doored by the U.S. National Security Agency. Score reduced by 2.</td>
+                            <td class="critical">critical</td>
+                        </tr>
+                        <tr>
+                            <td class="warn">rsa-sha2-512 (2048-bit)<th>
+                            <td>A 3072-bit modulus is needed to provide 128 bits of security, but a 2048-bit modulus is in use. Score reduced by 1.</td>
+                            <td class="warn">warning</td>
+                        </tr>
+                        <tr>
+                            <td class="unknown">ssh-rsa-sha256@ssh.com<th>
+                            <td></td>
+                            <td class="unknown">unknown</td>
+                        </tr>
+                        <tr>
+                            <td class="warn">rsa-sha2-256 (2048-bit)<th>
+                            <td>A 3072-bit modulus is needed to provide 128 bits of security, but a 2048-bit modulus is in use. Score reduced by 1.</td>
+                            <td class="warn">warning</td>
+                        </tr>
+                        <tr>
+                            <td class="warn">ssh-rsa (2048-bit)<th>
+                            <td>A 3072-bit modulus is needed to provide 128 bits of security, but a 2048-bit modulus is in use. Score reduced by 1.</td>
+                            <td class="warn">warning</td>
+                        </tr>
+                </table>
+            </div>
+            <div class="scan-results__item result--styles">
+                <div class="scan-results__item__title">
+                    <H2>Ciphers</H2>
+                    <h3 class="warn">Passed: 4/10</h3>
+                </div>
+                <table>
+                        <tr>
+                            <td class="ok">ssh-ed25519<th>
+                            <td>10.11.12.13</td>
+                            <td class="ok">ok</td>
+                        </tr>
+                        <tr>
+                            <td class="critical">ecdsa-sha2-nistp256<th>
+                            <td>NIST P-curves are possibly back-doored by the U.S. National Security Agency. Score reduced by 2.</td>
+                            <td class="critical">critical</td>
+                        </tr>
+                        <tr>
+                            <td class="warn">rsa-sha2-512 (2048-bit)<th>
+                            <td>A 3072-bit modulus is needed to provide 128 bits of security, but a 2048-bit modulus is in use. Score reduced by 1.</td>
+                            <td class="warn">warning</td>
+                        </tr>
+                        <tr>
+                            <td class="unknown">ssh-rsa-sha256@ssh.com<th>
+                            <td></td>
+                            <td class="unknown">unknown</td>
+                        </tr>
+                        <tr>
+                            <td class="warn">rsa-sha2-256 (2048-bit)<th>
+                            <td>A 3072-bit modulus is needed to provide 128 bits of security, but a 2048-bit modulus is in use. Score reduced by 1.</td>
+                            <td class="warn">warning</td>
+                        </tr>
+                        <tr>
+                            <td class="warn">ssh-rsa (2048-bit)<th>
+                            <td>A 3072-bit modulus is needed to provide 128 bits of security, but a 2048-bit modulus is in use. Score reduced by 1.</td>
+                            <td class="warn">warning</td>
+                        </tr>
+                </table>
+            </div>
+            <div class="scan-results__item result--styles">
+                <div class="scan-results__item__title">
+                    <H2>Message authentication code</H2>
+                    <h3 class="warn">Passed: 6/10</h3>
+                </div>
+                <table>
+                        <tr>
+                            <td class="ok">ssh-ed25519<th>
+                            <td>10.11.12.13</td>
+                            <td class="ok">ok</td>
+                        </tr>
+                        <tr>
+                            <td class="critical">ecdsa-sha2-nistp256<th>
+                            <td>NIST P-curves are possibly back-doored by the U.S. National Security Agency. Score reduced by 2.</td>
+                            <td class="critical">critical</td>
+                        </tr>
+                        <tr>
+                            <td class="warn">rsa-sha2-512 (2048-bit)<th>
+                            <td>A 3072-bit modulus is needed to provide 128 bits of security, but a 2048-bit modulus is in use. Score reduced by 1.</td>
+                            <td class="warn">warning</td>
+                        </tr>
+                        <tr>
+                            <td class="unknown">ssh-rsa-sha256@ssh.com<th>
+                            <td></td>
+                            <td class="unknown">unknown</td>
+                        </tr>
+                        <tr>
+                            <td class="warn">rsa-sha2-256 (2048-bit)<th>
+                            <td>A 3072-bit modulus is needed to provide 128 bits of security, but a 2048-bit modulus is in use. Score reduced by 1.</td>
+                            <td class="warn">warning</td>
+                        </tr>
+                        <tr>
+                            <td class="warn">ssh-rsa (2048-bit)<th>
+                            <td>A 3072-bit modulus is needed to provide 128 bits of security, but a 2048-bit modulus is in use. Score reduced by 1.</td>
+                            <td class="warn">warning</td>
+                        </tr>
+                </table>
+            </div>
+            <div class="scan-results__item result--styles">
+                <div class="scan-results__item__title">
+                    <H2>Key exchange algorithm</H2>
+                    <h3 class="ok">Passed: 9/10</h3>
+                </div>
+                <table>
+                        <tr>
+                            <td class="ok">ssh-ed25519<th>
+                            <td>10.11.12.13</td>
+                            <td class="ok">ok</td>
+                        </tr>
+                        <tr>
+                            <td class="critical">ecdsa-sha2-nistp256<th>
+                            <td>NIST P-curves are possibly back-doored by the U.S. National Security Agency. Score reduced by 2.</td>
+                            <td class="critical">critical</td>
+                        </tr>
+                        <tr>
+                            <td class="warn">rsa-sha2-512 (2048-bit)<th>
+                            <td>A 3072-bit modulus is needed to provide 128 bits of security, but a 2048-bit modulus is in use. Score reduced by 1.</td>
+                            <td class="warn">warning</td>
+                        </tr>
+                        <tr>
+                            <td class="unknown">ssh-rsa-sha256@ssh.com<th>
+                            <td></td>
+                            <td class="unknown">unknown</td>
+                        </tr>
+                        <tr>
+                            <td class="warn">rsa-sha2-256 (2048-bit)<th>
+                            <td>A 3072-bit modulus is needed to provide 128 bits of security, but a 2048-bit modulus is in use. Score reduced by 1.</td>
+                            <td class="warn">warning</td>
+                        </tr>
+                        <tr>
+                            <td class="warn">ssh-rsa (2048-bit)<th>
+                            <td>A 3072-bit modulus is needed to provide 128 bits of security, but a 2048-bit modulus is in use. Score reduced by 1.</td>
+                            <td class="warn">warning</td>
+                        </tr>
+                </table>
+            </div>
+        </div>
+        <div class="scan-results__cve">
+            <div class="scan-results__cve__header">
+                <H2>CVE's</H2>
+                <h3 class="critical">3 critical</h3>
+            </div>
+            <div class="scan-results__cve__item">
+                <h4>Possibly Compromised NIST P-Curves In Use</h4>
+                <h5>Description: <span>The NIST P-curves are strongly suspected by some as being back-doored by the NSA.</span> </h5>
+                <h5>Affected Algorithms
+                    <span>
+                        <ul>
+                            <li>ecdsa-sha2-nistp256</li>
+                            <li>ecdh-sha2-nistp521</li>
+                            <li>ecdh-sha2-nistp384</li>
+                            <li>ecdh-sha2-nistp256</li>
+                        </ul>
+                    </span>
+                </h5>
+                <h5>Solution: <span>Replace ECDSA host keys with RSA and/or ED25519 host keys. Replace ECDH key exchange algorithms with traditional Diffie-Hellman algorithms and/or the Curve25519 algorithm.</span></h5>
+                <h5>References:</h5>
+                <div class="reference">
+                    Bernstein, D., Lange, T., "SafeCurves: choosing safe curves for elliptic-curve cryptography", 
+                    <a href="https://safecurves.cr.yp.to/">https://safecurves.cr.yp.to/</a>, Published 2014, Retrieved Oct. 3, 2017.
+                </div>
+            </div>
+            <div class="scan-results__cve__item">
+                <h4>Deprecated & Weak SHA-1 Algorithm In Use</h4>
+                <h5>Description: <span>SHA-1 is known to have several practical & exploitable weaknesse.</span> </h5>
+                <h5>Affected Algorithms
+                    <span>
+                        <ul>
+                            <li>diffie-hellman-group14-sha1</li>
+                            <li>diffie-hellman-group-exchange-sha1</li>
+                            <li>hmac-sha1</li>
+                        </ul>
+                    </span>
+                </h5>
+                <h5>Solution: <span>Replace SHA-1 with SHA-256, SHA-384, or SHA-512</span></h5>
+                <h>References:</h>
+                <div class="reference">
+                    Stevens, M., Bursztein, E., Karpman, P., Albertini, A., Markov, Y., "The first collision for full SHA-1", <a href="https://shattered.io/static/shattered.pdf">https://shattered.io/static/shattered.pdf</a>, Retrieved Jun. 1, 2017.
+                </div>
+                <div class="reference">
+                    Google, Inc., "Gradually sunsetting SHA-1", <a href="https://security.googleblog.com/2014/09/gradually-sunsetting-sha-1.html">https://security.googleblog.com/2014/09/gradually-sunsetting-sha-1.html</a>, Published Sept. 5, 2014, Retrieved Jun. 1, 2017.
+                </div>
+            </div>
         </div>
     </div>
 </main>
+<script>
+    const containers = document.querySelectorAll('.scan-results__item');
+    
+    containers.forEach(container => {
+    const table = container.querySelector('table');
+    container.addEventListener('click', () => {
+        table.classList.toggle('open');
+        });
+    });
+</script>
 </body>
 </html>
