@@ -309,7 +309,6 @@ main form {
 }
 .scan-results__item table td:nth-child(4) {
   padding-right: 4rem;
-  font-weight: 400;
   text-align: center;
 }
 
