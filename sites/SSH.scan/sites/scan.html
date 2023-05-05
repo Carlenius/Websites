@@ -217,48 +217,49 @@
         </div>
         <div class="scan-results__cve">
             <div class="scan-results__cve__header">
-                <H2>CVE's</H2>
+                <H2>Vulnerabilities</H2>
                 <h3 class="critical">3 critical</h3>
             </div>
             <div class="scan-results__cve__item">
-                <h4>Possibly Compromised NIST P-Curves In Use</h4>
+                <h4>CVE: Big cve WOW DANGER <span class="critical">Critical</span> </h4>
                 <h5>Description: <span>The NIST P-curves are strongly suspected by some as being back-doored by the NSA.</span> </h5>
-                <h5>Affected Algorithms
-                    <span>
-                        <ul>
-                            <li>ecdsa-sha2-nistp256</li>
-                            <li>ecdh-sha2-nistp521</li>
-                            <li>ecdh-sha2-nistp384</li>
-                            <li>ecdh-sha2-nistp256</li>
-                        </ul>
-                    </span>
-                </h5>
-                <h5>Solution: <span>Replace ECDSA host keys with RSA and/or ED25519 host keys. Replace ECDH key exchange algorithms with traditional Diffie-Hellman algorithms and/or the Curve25519 algorithm.</span></h5>
                 <h5>References:</h5>
                 <div class="reference">
-                    Bernstein, D., Lange, T., "SafeCurves: choosing safe curves for elliptic-curve cryptography", 
-                    <a href="https://safecurves.cr.yp.to/">https://safecurves.cr.yp.to/</a>, Published 2014, Retrieved Oct. 3, 2017.
+                    <ul>
+                        <li>
+                            <p>GITHUB <a href="LINK">LINKTEXT</a></p>
+                        </li>
+                        <li>
+                            <p>WIKIPEDIA <a href="LINK">LINKTEXT</a></p>
+                        </li>
+                        <li>
+                            <p>HELSINGIN-SANOMAT <a href="LINK">LINKTEXT</a></p>
+                        </li>
+                        <li>
+                            <p>ME <a href="LINK">LINKTEXT</a></p>
+                        </li>
+                    </ul>
                 </div>
             </div>
             <div class="scan-results__cve__item">
-                <h4>Deprecated & Weak SHA-1 Algorithm In Use</h4>
+                <h4>CVE: Another big danger here <span class="critical">Critical</span></h4>
                 <h5>Description: <span>SHA-1 is known to have several practical & exploitable weaknesse.</span> </h5>
-                <h5>Affected Algorithms
-                    <span>
-                        <ul>
-                            <li>diffie-hellman-group14-sha1</li>
-                            <li>diffie-hellman-group-exchange-sha1</li>
-                            <li>hmac-sha1</li>
-                        </ul>
-                    </span>
-                </h5>
-                <h5>Solution: <span>Replace SHA-1 with SHA-256, SHA-384, or SHA-512</span></h5>
                 <h5>References:</h5>
                 <div class="reference">
-                    Stevens, M., Bursztein, E., Karpman, P., Albertini, A., Markov, Y., "The first collision for full SHA-1", <a href="https://shattered.io/static/shattered.pdf">https://shattered.io/static/shattered.pdf</a>, Retrieved Jun. 1, 2017.
-                </div>
-                <div class="reference">
-                    Google, Inc., "Gradually sunsetting SHA-1", <a href="https://security.googleblog.com/2014/09/gradually-sunsetting-sha-1.html">https://security.googleblog.com/2014/09/gradually-sunsetting-sha-1.html</a>, Published Sept. 5, 2014, Retrieved Jun. 1, 2017.
+                    <ul>
+                        <li>
+                            <p>NAME <a href="LINK">LINKTEXT</a></p>
+                        </li>
+                        <li>
+                            <p>NAME <a href="LINK">LINKTEXT</a></p>
+                        </li>
+                        <li>
+                            <p>NAME <a href="LINK">LINKTEXT</a></p>
+                        </li>
+                        <li>
+                            <p>NAME <a href="LINK">LINKTEXT</a></p>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -267,7 +268,6 @@
 <script>
     // Opening table list
     const containers = document.querySelectorAll('.scan-results__item');
-    
     containers.forEach(container => {
     const table = container.querySelector('table');
     container.addEventListener('click', () => {
@@ -275,16 +275,18 @@
         });
     });
 
+
+    // Navbar behaviour
     var prevScrollpos = window.pageYOffset;
-window.onscroll = function() {
-var currentScrollPos = window.pageYOffset;
-  if (prevScrollpos > currentScrollPos) {
-    document.getElementById("navbar").style.top = "0";
-  } else {
-    document.getElementById("navbar").style.top = "-100px";
-  }
-  prevScrollpos = currentScrollPos;
-}
+    window.onscroll = function() {
+        var currentScrollPos = window.pageYOffset;
+        if (prevScrollpos > currentScrollPos) {
+            document.getElementById("navbar").style.top = "0";
+        } else {
+            document.getElementById("navbar").style.top = "-100px";
+        }       
+        prevScrollpos = currentScrollPos;
+    }
 </script>
 </body>
 </html>

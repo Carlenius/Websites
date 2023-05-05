@@ -38,6 +38,7 @@
     </div>
 </main>
 <script>
+    // Navbar behaviour
     var prevScrollpos = window.pageYOffset;
     window.onscroll = function() {
         var currentScrollPos = window.pageYOffset;
@@ -46,8 +47,8 @@
         } else {
             document.getElementById("navbar").style.top = "-100px";
         }       
-prevScrollpos = currentScrollPos;
-}
+        prevScrollpos = currentScrollPos;
+    }
 </script>
 </body>
 </html>

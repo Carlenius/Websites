@@ -16,6 +16,7 @@ html, body {
 
 html {
   font-size: 62.5%; /* 10px = 1rem! */
+  scroll-behavior: smooth;
 }
 
 input, button, textarea, select {
@@ -289,15 +290,7 @@ main form {
 
 .scan-results__item {
   padding: 4rem 0 0 0;
-  animation: growDown 300ms ease-in-out forwards;
-  transform-origin: top center;
-}
-.scan-results__item:hover {
-  background-color: hsla(0, 0%, 80%, 0.02);
-  cursor: pointer;
-}
-.scan-results__item:hover table tr:nth-child(2n+1) {
-  background-color: hsla(0, 0%, 0%, 0.1);
+  position: relative;
 }
 .scan-results__item table {
   display: none;
@@ -315,7 +308,7 @@ main form {
 }
 .scan-results__item table td:nth-child(4) {
   padding-right: 4rem;
-  text-align: center;
+  text-align: end;
 }
 
 .scan-results__cve {
@@ -355,6 +348,9 @@ main form {
   padding: 6rem 0 5rem 0;
   position: relative;
 }
+.scan-results__cve__item li {
+  list-style-type: no;
+}
 .scan-results__cve__item h4 {
   padding: 0 8rem 2rem 8rem;
   font-size: 2rem;
@@ -372,6 +368,13 @@ main form {
   left: 4rem;
   color: #00DCFF;
   font-weight: 600;
+}
+.scan-results__cve__item h4 {
+  display: flex;
+  justify-content: space-between;
+}
+.scan-results__cve__item h4 span {
+  text-align: end;
 }
 .scan-results__cve__item h5 {
   padding: 0 8rem 2rem 8rem;
@@ -411,6 +414,16 @@ main form {
   margin: 0 0 1rem 12rem;
   color: rgb(211, 211, 211);
 }
+.reference li {
+  list-style-type: none;
+}
+.reference li p:before {
+  content: "•";
+  color: #00DCFF;
+  font-weight: bold;
+  display: inline-block;
+  width: 2rem;
+}
 .reference a {
   color: #00DCFF;
 }
@@ -436,7 +449,7 @@ main form {
 }
 
 .open {
-  display: table !important;
+  display: block !important;
   padding-bottom: 4rem;
 }
 

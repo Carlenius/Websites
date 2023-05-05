@@ -15,6 +15,7 @@ html, body {
 
 html {
     font-size: 62.5%; /* 10px = 1rem! */
+    scroll-behavior: smooth;
 }
 
 input, button, textarea, select {
@@ -337,20 +338,12 @@ main {
 
 .scan-results__item {
     padding: 4rem 0 0 0;
-    animation: growDown 300ms ease-in-out forwards;
-    transform-origin: top center;
+    position: relative;
     
-
-    &:hover {
-        background-color: hsla(0, 0%, 80%, 0.02);
-        cursor: pointer;
-        table tr:nth-child(2n+1) {
-            background-color: hsla(0, 0%, 0%, 0.1);
-        }
-    }
 
     table {
     display: none;
+
 
     td {
         vertical-align: top;
@@ -364,7 +357,7 @@ main {
         }
         &:nth-child(4) {
             padding-right: 4rem;
-            text-align: center;
+            text-align: end;
         }
     }
     }
@@ -413,6 +406,10 @@ main {
     width: 100%;
     padding: 6rem 0 5rem 0;
     position: relative;
+    
+    li {
+        list-style-type: no;
+    }
 
     h4 {
         padding: 0 8rem 2rem 8rem;
@@ -432,6 +429,14 @@ main {
                 color: $color-accent;
                 font-weight: 600;
             }
+        }
+    }
+
+    h4 {
+        display: flex;
+        justify-content: space-between;
+        span {
+            text-align: end;
         }
     }
     
@@ -481,6 +486,19 @@ main {
     margin: 0 0 1rem 12rem;
     color: $color-lightgray;
 
+    li {
+        list-style-type: none;
+        p {
+            &:before {
+                content: "\2022";
+                color: $color-accent; 
+                font-weight: bold;
+                display: inline-block;
+                width: 2rem; 
+            }
+        }
+    }
+
     a {
         color: $color-accent;
     }
@@ -510,9 +528,10 @@ main {
 }
 
 .open {
-    display: table !important;
+    display: block !important;
     padding-bottom: 4rem;
 }
+
 
 @keyframes growDown {
     0% {
