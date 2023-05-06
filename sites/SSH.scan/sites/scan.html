@@ -33,9 +33,8 @@
         </div>
         <input onclick="testLoader()" class="btn-main" type="submit" id="button" value="SCAN NOW">
     </form>
-    <button onclick="testLoader()" id="loaderButton" style="margin-top:50px; width: 100px; height: 50px;">Test loader</button>
 
-    <div id="loader" class="loader loader--style8 " title="7">
+    <div id="loader" class="loader loader--style8" title="7">
         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
         width="100%" height="100%" viewBox="10 -30 2 100" style="enable-background:new 0 0 50 50;" xml:space="preserve">
             <rect x="0" y="10" width="4" height="10" fill="#333" opacity="0.2">
@@ -59,7 +58,7 @@
     <div class="scan-results">
         <div class="scan-results__header">
             <h1 class="scan-results__header__title">SSH Scan report:</h1>
-            <button class="btn-filled">Get PDF</button>
+            <button onclick="loaderTest()" class="btn-filled">Get PDF</button>
         </div>
 
         <div class="scan-results__table" >
@@ -194,7 +193,7 @@
                         </tr>
                         <tr>
                             <td class="warn">ssh-rsa (2048-bit)<th>
-                            <td>A 3072-bit modulus is needed to provide 128 bits of security, but a 2048-bit modulus is in use. Score reduced by 1.</td>
+                            <td></td>
                             <td class="warn">warning</td>
                         </tr>
                 </table>
@@ -207,17 +206,17 @@
                 <table>
                         <tr>
                             <td class="ok">ssh-ed25519<th>
-                            <td>10.11.12.13</td>
+                            <td></td>
                             <td class="ok">ok</td>
                         </tr>
                         <tr>
                             <td class="critical">ecdsa-sha2-nistp256<th>
-                            <td>NIST P-curves are possibly back-doored by the U.S. National Security Agency. Score reduced by 2.</td>
+                            <td></td>
                             <td class="critical">critical</td>
                         </tr>
                         <tr>
                             <td class="warn">rsa-sha2-512 (2048-bit)<th>
-                            <td>A 3072-bit modulus is needed to provide 128 bits of security, but a 2048-bit modulus is in use. Score reduced by 1.</td>
+                            <td></td>
                             <td class="warn">warning</td>
                         </tr>
                         <tr>
@@ -227,12 +226,12 @@
                         </tr>
                         <tr>
                             <td class="warn">rsa-sha2-256 (2048-bit)<th>
-                            <td>A 3072-bit modulus is needed to provide 128 bits of security, but a 2048-bit modulus is in use. Score reduced by 1.</td>
+                            <td></td>
                             <td class="warn">warning</td>
                         </tr>
                         <tr>
                             <td class="warn">ssh-rsa (2048-bit)<th>
-                            <td>A 3072-bit modulus is needed to provide 128 bits of security, but a 2048-bit modulus is in use. Score reduced by 1.</td>
+                            <td></td>
                             <td class="warn">warning</td>
                         </tr>
                 </table>
@@ -289,6 +288,12 @@
     </div>
 </main>
 <script>
+    // Loader test function
+    function loaderTest() {
+    var element = document.getElementById("loader");
+    element.classList.toggle("loader--open");
+    }
+
     // Opening table list
     const containers = document.querySelectorAll('.scan-results__item');
     containers.forEach(container => {
@@ -311,16 +316,9 @@
         prevScrollpos = currentScrollPos;
     }
 
+    
 
-    const loaderTimeout = setTimeout(testLoader, 3000);
-    function testLoader() {
-    var element = document.getElementById("loader");
-    element.classList.toggle("loader--open");
 
-    function myStopFunction() {
-    clearTimeout(loaderTimeout);
-}
-}
 </script>
 </body>
 </html>

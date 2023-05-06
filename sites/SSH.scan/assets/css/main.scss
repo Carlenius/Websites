@@ -260,7 +260,7 @@ main {
     }
     table {
         font-size: 2rem;
-        width: 100%;
+        width: 100;
         text-align: start;
         font-weight: 600;
         border-spacing: 0;
@@ -276,7 +276,8 @@ main {
                 width: 50rem;
             }
             &:nth-child(2) {
-                font-weight: 400;
+                font-weight: 200;
+                width: 1000px;
             }
         }
     }
@@ -339,6 +340,7 @@ main {
 .scan-results__item {
     padding: 4rem 0 0 0;
     position: relative;
+    width: 100%;
     
 
     table {
@@ -357,7 +359,8 @@ main {
         }
         &:nth-child(4) {
             padding-right: 4rem;
-            text-align: end;
+            text-align: right;
+            right: 0;
         }
     }
     }
@@ -523,6 +526,15 @@ main {
     user-select: none;
 }
 
+.mystyle {
+    width: 100%;
+    padding: 25px;
+    background-color: coral;
+    color: white;
+    font-size: 25px;
+    box-sizing: border-box;
+  }
+
 .loader--open {
     height: 100%;
     top: 0;
@@ -565,8 +577,9 @@ svg rect{
 }
 
 .open {
-    display: block !important;
+    display: table !important;
     padding-bottom: 4rem;
+    width: 100%;
 }
 
 
