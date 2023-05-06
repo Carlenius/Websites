@@ -342,10 +342,19 @@ main {
     position: relative;
     width: 100%;
     
+    &:hover {
+        background-color: hsla(0, 0%, 100%, 0.03);
+        cursor: pointer;
+
+        table tr:nth-child(2n + 1) {
+            background-color: hsla(0, 0%, 0%, 0.1);
+        }
+    }
 
     table {
     display: none;
 
+    
 
     td {
         vertical-align: top;
@@ -520,7 +529,7 @@ main {
     margin: 0 auto;
     display: inline-block;
     vertical-align: center;
-    background-color: hsla(0, 0, 0, 0.6);    
+    background-color: hsla(0, 0%, 0%, 0.6);
     z-index: 999;
     transition: 0.5s;
     user-select: none;

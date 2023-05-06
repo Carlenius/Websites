@@ -294,6 +294,13 @@ main form {
   position: relative;
   width: 100%;
 }
+.scan-results__item:hover {
+  background-color: hsla(0, 0%, 100%, 0.03);
+  cursor: pointer;
+}
+.scan-results__item:hover table tr:nth-child(2n+1) {
+  background-color: hsla(0, 0%, 0%, 0.1);
+}
 .scan-results__item table {
   display: none;
 }
