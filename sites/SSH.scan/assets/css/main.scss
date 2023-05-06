@@ -504,6 +504,39 @@ main {
     }
 }
 
+.loader{
+    position: fixed;
+    top: 50%;
+    opacity: 0;
+    left: 0;
+    margin: 0 0 2em;
+    height: 0%;
+    width: 100%;
+    text-align: center;
+    padding: 1em;
+    margin: 0 auto;
+    display: inline-block;
+    vertical-align: center;
+    background-color: hsla(0, 0, 0, 0.6);    
+    z-index: 999;
+    transition: 0.5s;
+    user-select: none;
+}
+
+.loader--open {
+    height: 100%;
+    top: 0;
+    opacity: 100%;
+}
+
+/*
+Set the color of the icon
+*/
+svg path,
+svg rect{
+    fill: $color-accent;
+}
+
 
 // Utilities
 
@@ -525,6 +558,10 @@ main {
 
 .hidden {
     visibility: hidden;
+}
+
+.hide {
+    display: none;
 }
 
 .open {

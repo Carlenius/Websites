@@ -428,6 +428,41 @@ main form {
   color: #00DCFF;
 }
 
+.loader {
+  position: fixed;
+  top: 50%;
+  opacity: 0;
+  left: 0;
+  margin: 0 0 2em;
+  height: 0%;
+  width: 100%;
+  text-align: center;
+  padding: 1em;
+  margin: 0 auto;
+  display: inline-block;
+  vertical-align: center;
+  background-color: hsla(0, 0%, 0%, 0.6);
+  z-index: 999;
+  transition: 0.5s;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+.loader--open {
+  height: 100%;
+  top: 0;
+  opacity: 100%;
+}
+
+/*
+Set the color of the icon
+*/
+svg path,
+svg rect {
+  fill: #00DCFF;
+}
+
 .ok {
   color: #1FDE72;
 }
@@ -446,6 +481,10 @@ main form {
 
 .hidden {
   visibility: hidden;
+}
+
+.hide {
+  display: none;
 }
 
 .open {
