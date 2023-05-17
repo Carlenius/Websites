@@ -140,6 +140,15 @@ main {
     }
 }
 
+.btn-loading {
+    width: 26rem;
+    height: 7rem;
+    border-radius: 10px;
+    background-color: $color-accent;
+    border: none;
+    outline: 2px solid $color-accent;
+    transition: .2s;
+}
 .search {
     font-size: 2rem;
     color: $color-lightgray;
@@ -515,24 +524,24 @@ main {
         color: $color-accent;
     }
 }
+.load-align {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+}
 
-.loader{
-    position: fixed;
-    top: 50%;
-    opacity: 0;
-    left: 0;
-    margin: 0 0 2em;
-    height: 0%;
-    width: 100%;
-    text-align: center;
-    padding: 1em;
-    margin: 0 auto;
+.spinner {
+    top: 10px;
+    width : 50px;
+    height: 50px;
+    border: 5px solid;
+    border-color: $color-main transparent;
+    border-radius: 50%;
     display: inline-block;
-    vertical-align: center;
-    background-color: hsla(0, 0%, 0%, 0.6);
-    z-index: 999;
-    transition: 0.5s;
-    user-select: none;
+    animation: rotation 1s linear infinite;
+    position: absolute;
 }
 
 .mystyle {
@@ -542,7 +551,7 @@ main {
     color: white;
     font-size: 25px;
     box-sizing: border-box;
-  }
+}
 
 .loader--open {
     height: 100%;
@@ -555,7 +564,7 @@ Set the color of the icon
 */
 svg path,
 svg rect{
-    fill: $color-accent;
+    fill: $color-main;
 }
 
 
@@ -602,6 +611,11 @@ svg rect{
     100% {
         transform: scaleY(1)
     }
+}
+
+@keyframes rotation {
+    0% { transform: rotate(0deg) }
+    100% { transform: rotate(360deg) }
 }
 
 
